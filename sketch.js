@@ -43,6 +43,13 @@ const car = {
     height: 80,
 };
 
+const center = {
+    x: car.x + car.width / 2,
+    y: car.y,
+};
+const y = car.y + car.height;
+const x = car.x + 70;
+
 const WIDTH = 800;
 const HEIGHT = 700;
 
@@ -75,12 +82,6 @@ function draw() {
     r.DrawCircleV(target, 40, r.YELLOW);
     r.DrawCircleLines(target.x, target.y, 20, r.BLACK);
     r.DrawRectangleRounded(car, 0.5, 8, r.BROWN);
-    const center = {
-        x: car.x + car.width / 2,
-        y: car.y,
-    };
-    const y = car.y + car.height;
-    const x = car.x + 70;
     r.DrawCircleSector(center, 75, 90, 270, 20, r.BROWN);
     r.DrawCircle(x, y, 40, r.BLACK);
     r.DrawCircle(x + 120, y, 40, r.BLACK);
